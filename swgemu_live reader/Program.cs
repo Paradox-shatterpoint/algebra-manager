@@ -94,6 +94,11 @@ namespace swgemu_live_reader
             var client = new System.Net.WebClient();
             string modselect;
             int dwn;
+            Console.WriteLine();
+            Console.WriteLine("----Mods currenly available on mtg----");
+            Console.WriteLine("1. Synters Satalite Maps 2.0");
+            Console.WriteLine("2. Better Rain Textures");
+            Console.WriteLine("3. SnowFX");
             Console.WriteLine("Enter the number of the mod you want to download and install");
             modselect = Console.ReadLine();
             Int32.TryParse(modselect, out dwn);
@@ -101,12 +106,15 @@ namespace swgemu_live_reader
             {
                 case 1:
                     client.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+                    Console.WriteLine("Synters Satalite Maps 2.0 was Downloaded");
                     break;
                 case 2:
                     client.DownloadFile("https://mega.nz/#!4iBmFABS!I40Erh4HMpYOrVPcM3m5cQ1spfv4SQPIws3bBPLAHj4", "BetterRainTextures.tre");
+                    Console.WriteLine("Better Rain Textures was Downloaded");
                     break;
                 case 3:
                     client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "snowfx");
+                    Console.WriteLine("SnowFX was Downloaded");
                     break;
             }
             Console.WriteLine(" ");
