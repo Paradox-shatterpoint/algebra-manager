@@ -90,6 +90,15 @@ namespace swgemu_live_reader
             {
                 Console.WriteLine(mod);
             }
+
+
+
+            using (var satmaps = new System.Net.WebClient())
+            {
+                satmaps.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+            }
+
+
             Console.WriteLine(" ");
             Console.WriteLine("enter to exit");
             Console.ReadKey();
