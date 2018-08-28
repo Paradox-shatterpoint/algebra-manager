@@ -99,7 +99,9 @@ namespace swgemu_live_reader
             Console.WriteLine("1. Synters Satalite Maps 2.0");
             Console.WriteLine("2. Better Rain Textures");
             Console.WriteLine("3. SnowFX");
-            Console.WriteLine("Enter the number of the mod you want to download and install");
+            Console.WriteLine("4. Enhanced Saber Trails");
+            Console.WriteLine("5. NGE GUI");
+            Console.WriteLine("Enter the number of the mod you want to download");
             modselect = Console.ReadLine();
             Int32.TryParse(modselect, out dwn);
             switch (dwn)
@@ -113,10 +115,20 @@ namespace swgemu_live_reader
                     Console.WriteLine("Better Rain Textures was Downloaded");
                     break;
                 case 3:
-                    client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "snowfx");
+                    client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "snowfx.tre");
                     Console.WriteLine("SnowFX was Downloaded");
                     break;
+                case 4:
+                    client.DownloadFile("https://mega.nz/#!VvJizYhJ!shlbCZ5F-1IHfUzo2YfeGqF0r2kbwEPLBkq3NEZVx1c", "Enhanced_SWGEmu_Saber_Trails_-_Valkyra.tre");
+                    Console.WriteLine("Enhanced Saber Trails was Downloaded");
+                    break;
+                case 5:
+                    client.DownloadFile("https://mega.nz/#!42Qg1AyK!iMxGDQswbNETXVgX0hxNq4xWKp4niAB2S9vl3mK42-A", "SWGEmu_GUI_Mod.tre");
+                    Console.WriteLine("NGE GUI was Downloaded");
+                    break;
             }
+
+
             Console.WriteLine(" ");
             Console.WriteLine("enter to exit");
             Console.ReadKey();
