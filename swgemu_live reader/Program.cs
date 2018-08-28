@@ -21,6 +21,9 @@ namespace swgemu_live_reader
             //Console.WriteLine("----Max Search Priority----");
             //Console.WriteLine(value2);
 
+            //to check if the mod folder exists, if it does not, make it
+            Directory.CreateDirectory(Path.GetDirectoryName("C://Program Files (x86)/SWGEmu/SWGEmu/mod/"));
+
             //reading mods in mod folder
             DirectoryInfo d = new DirectoryInfo("C://Program Files (x86)/SWGEmu/SWGEmu/mod/");//Assuming you have a swgemu\mod folder
             FileInfo[] Files = d.GetFiles("*.tre"); //Getting Text files
