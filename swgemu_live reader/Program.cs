@@ -11,10 +11,26 @@ namespace swgemu_live_reader
     {
         static void Main(string[] args)
         {
+            //makes sure user have swgemu installed in the correct directory
+            Console.WriteLine("Make sure SWGEmu is installed in Program Files (x86)/SWGEmu/SWGEmu/");
+            Console.WriteLine("before running the rest of the program");
+            Console.ReadKey();
+
+            if (File.Exists("C://Program Files (x86)/SWGEmu/SWGEmu/SWGEmu.exe"))
+                {
+                Console.WriteLine("SWGEmu is intalled in the correct directory, hit enter to continue");
+                }
+            else
+                {
+                Environment.Exit(0);
+                }
             //reading and loading all of swgemu_live
             //string value1 = File.ReadAllText("C://Program Files (x86)/SWGEmu/SWGEmu/swgemu_live.cfg");
             //Console.WriteLine("----swgemu_live----");
             //Console.WriteLine(value1);
+
+            //checks for existance of swsgemu_live.cfg
+            Directory.CreateDirectory(Path.GetDirectoryName("C://Program Files (x86)/SWGEmu/SWGEmu/swgemu_live.cfg"));
 
             //reading Max Search prioirty line in swgemu_live
             string maxsearchline = File.ReadLines("C://Program Files (x86)/SWGEmu/SWGEmu/swgemu_live.cfg").Skip(2).Take(1).First();
