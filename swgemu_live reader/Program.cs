@@ -91,19 +91,45 @@ namespace swgemu_live_reader
                 Console.WriteLine(mod);
             }
 
-
-
-            using (var satmaps = new System.Net.WebClient())
+            var client = new System.Net.WebClient();
+            string modselect;
+            int dwn;
+            Console.WriteLine("Enter the number of the mod you want to download and install");
+            modselect = Console.ReadLine();
+            Int32.TryParse(modselect, out dwn);
+            switch (dwn)
             {
-                satmaps.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+                case 1:
+                    client.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+                    break;
+                case 2:
+                    client.DownloadFile("https://mega.nz/#!4iBmFABS!I40Erh4HMpYOrVPcM3m5cQ1spfv4SQPIws3bBPLAHj4", "BetterRainTextures.tre");
+                    break;
+                case 3:
+                    client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "snowfx");
+                    break;
             }
-
-
             Console.WriteLine(" ");
             Console.WriteLine("enter to exit");
             Console.ReadKey();
 
 
         }
+        //{
+        //    using (var satmaps = new System.Net.WebClient())
+        //    {
+        //        satmaps.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+        //    }
+        //}
+        //if thing = 2;
+        //{
+        //    using (var betterrain = new System.Net.WebClient())
+        //    {
+        //        betterrain.DownloadFile("https://mega.nz/#!4iBmFABS!I40Erh4HMpYOrVPcM3m5cQ1spfv4SQPIws3bBPLAHj4", "BetterRainTextures");
+        //    }
+        //}
+
+
+
     }
 }
