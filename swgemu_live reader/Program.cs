@@ -104,26 +104,26 @@ namespace swgemu_live_reader
             Console.WriteLine("Enter the number of the mod you want to download");
             modselect = Console.ReadLine();
             Int32.TryParse(modselect, out dwn);
-            switch (dwn)
+            switch (dwn) //these don't work as yet, because they do not download the file, they download an empty file
             {
                 case 1:
-                    client.DownloadFile("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI", "sytners_sat_maps_2.tre");
+                    client.DownloadFileAsync(new Uri("https://mega.nz/#!BJgywBib!lY5fBhnuNF2MZFmHT_0RHW2USvB4Wzye3SXW8p7iaeI"), "C://Program Files (x86)/SWGEmu/SWGEmu/mod/sytners_sat_maps_2.tre");
                     Console.WriteLine("Synters Satalite Maps 2.0 was Downloaded");
                     break;
                 case 2:
-                    client.DownloadFile("https://mega.nz/#!4iBmFABS!I40Erh4HMpYOrVPcM3m5cQ1spfv4SQPIws3bBPLAHj4", "BetterRainTextures.tre");
+                    client.DownloadFile("https://mega.nz/#!4iBmFABS!I40Erh4HMpYOrVPcM3m5cQ1spfv4SQPIws3bBPLAHj4", "C://Program Files (x86)/SWGEmu/SWGEmu/mod/BetterRainTextures.tre");
                     Console.WriteLine("Better Rain Textures was Downloaded");
                     break;
                 case 3:
-                    client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "snowfx.tre");
+                    client.DownloadFile("https://mega.nz/#!NiBmHQYT!U4jcnm0UBoJFkHNqrkNCwlLHq4SiE2iC6rVNtlAaJK4", "C://Program Files (x86)/SWGEmu/SWGEmu/mod/snowfx.tre");
                     Console.WriteLine("SnowFX was Downloaded");
                     break;
                 case 4:
-                    client.DownloadFile("https://mega.nz/#!VvJizYhJ!shlbCZ5F-1IHfUzo2YfeGqF0r2kbwEPLBkq3NEZVx1c", "Enhanced_SWGEmu_Saber_Trails_-_Valkyra.tre");
+                    client.DownloadFile("https://mega.nz/#!VvJizYhJ!shlbCZ5F-1IHfUzo2YfeGqF0r2kbwEPLBkq3NEZVx1c", "C://Program Files (x86)/SWGEmu/SWGEmu/mod/Enhanced_SWGEmu_Saber_Trails_-_Valkyra.tre");
                     Console.WriteLine("Enhanced Saber Trails was Downloaded");
                     break;
                 case 5:
-                    client.DownloadFile("https://mega.nz/#!42Qg1AyK!iMxGDQswbNETXVgX0hxNq4xWKp4niAB2S9vl3mK42-A", "SWGEmu_GUI_Mod.tre");
+                    client.DownloadFile("https://mega.nz/#!42Qg1AyK!iMxGDQswbNETXVgX0hxNq4xWKp4niAB2S9vl3mK42-A", "C://Program Files (x86)/SWGEmu/SWGEmu/mod/SWGEmu_GUI_Mod.tre");
                     Console.WriteLine("NGE GUI was Downloaded");
                     break;
             }
